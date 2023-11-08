@@ -7,7 +7,6 @@ import 'package:tecom/features/authentication/screens/login/widgets/login_form.d
 import 'package:tecom/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 import 'package:tecom/utils/constants/text_strings.dart';
-import 'package:tecom/utils/helpers/helper_functions.dart';
 
 
 class LoginScreen extends StatelessWidget {
@@ -15,7 +14,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    //final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
