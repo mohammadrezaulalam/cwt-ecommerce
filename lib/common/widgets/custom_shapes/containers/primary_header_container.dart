@@ -14,11 +14,10 @@ class TPrimaryHeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TCurvedEdgeWidget(
-      child: Container(
-        color: TColors.primary,
-        padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
+      child: SizedBox(
+        height: 400,
+        child: Container(
+          color: TColors.primary,
           /// if [size.inFinite: is not true.in stack] error occurred -> Read README.md fiel at
           child: Stack(
             children: [
