@@ -32,4 +32,19 @@ class TImages{
   static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-man-receives-a-mail.png";
   static const String verifyIllustration = "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
 
+  //Banners
+  static const String promoBanner1 = "assets/images/banners/promo-banner-1.png";
+  static const String promoBanner2 = "assets/images/banners/promo-banner-2.png";
+  static const String promoBanner3 = "assets/images/banners/promo-banner-3.png";
+  static const String promoBanner4 = "assets/images/banners/banner_3.jpg";
+  static const String banner1 = "assets/images/banners/banner_1.jpg";
+  static const String banner2 = "assets/images/banners/banner_2.jpg";
+  static const String banner3 = "assets/images/banners/banner_3.jpg";
+  static const String banner4 = "assets/images/banners/banner_4.jpg";
+  static const String banner5 = "assets/images/banners/banner_5.jpg";
+  static const String banner6 = "assets/images/banners/banner_6.jpg";
+  static const String banner7 = "assets/images/banners/banner_7.jpg";
+  static const String banner8 = "assets/images/banners/banner_8.jpg";
+
+
 }

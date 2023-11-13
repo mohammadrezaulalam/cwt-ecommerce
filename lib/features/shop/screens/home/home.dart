@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tecom/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tecom/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:tecom/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:tecom/utils/constants/colors.dart';
+import 'package:tecom/utils/constants/image_strings.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
@@ -44,12 +46,22 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            ///Body Section
+            Padding(
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
 
 
 
