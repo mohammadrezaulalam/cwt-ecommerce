@@ -4,11 +4,11 @@ import 'package:tecom/common/styles/shadows.dart';
 import 'package:tecom/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tecom/common/widgets/images/t_rounded_image.dart';
 import 'package:tecom/common/widgets/texts/product_title_text.dart';
+import 'package:tecom/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:tecom/utils/constants/colors.dart';
 import 'package:tecom/utils/constants/image_strings.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 import 'package:tecom/utils/helpers/helper_functions.dart';
-
 import '../../icons/t_circular_icon.dart';
 import '../../texts/product_price_text.dart';
 
@@ -58,6 +58,7 @@ class TProductCardVertical extends StatelessWidget {
                     child: TCircularIcon(
                       icon: Iconsax.heart5,
                       color: TColors.favButton,
+                      //backgroundColor: ,
                     ),
                   ),
                 ],
@@ -66,50 +67,49 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             /// Details
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text('Nike', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium,),
-                      const SizedBox(height: TSizes.xs),
-                      const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs,),
-                    ],
-                  ),
-                  //const Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ///Price
-                      const TProductPriceText(price: '35.0'),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(
-                              Iconsax.add,
-                              color: TColors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  TProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
+                  SizedBox(height: TSizes.spaceBtwItems / 2),
+                  TBrandTitleWithVerifiedIcon(title: 'Nike'),
 
                 ],
               ),
+            ),
+
+            // Add Spacer() here to keep the height of each Box same in case 1 or 2 lines of Headings
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ///Price
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(price: '35.0'),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: TColors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
