@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tecom/utils/constants/colors.dart';
 import 'package:tecom/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:tecom/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:tecom/utils/theme/custom_themes/chip_theme.dart';
@@ -15,11 +16,12 @@ class TAppTheme{
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
+    disabledColor: TColors.grey,
     brightness: Brightness.light,
-    primaryColor: Colors.blue,
+    primaryColor: TColors.primary,
     textTheme: TTextTheme.lightTextTheme,
     chipTheme: TChipTheme.lightChipTheme,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: TColors.white,
     appBarTheme: TAppBarTheme.lightAppBarTheme,
     checkboxTheme: TCheckBoxTheme.lightCheckBoxTheme,
     bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
@@ -31,11 +33,12 @@ class TAppTheme{
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     fontFamily: 'Poppins',
+    disabledColor: TColors.grey,
     brightness: Brightness.dark,
-    primaryColor: Colors.blue,
+    primaryColor: TColors.primary,
     textTheme: TTextTheme.darkTextTheme,
     chipTheme: TChipTheme.darkChipTheme,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: TColors.black,
     appBarTheme: TAppBarTheme.darkAppBarTheme,
     checkboxTheme: TCheckBoxTheme.darkCheckBoxTheme,
     bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
