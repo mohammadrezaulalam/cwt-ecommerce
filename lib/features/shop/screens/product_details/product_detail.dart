@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:tecom/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
@@ -6,6 +7,7 @@ import 'package:tecom/features/shop/screens/product_details/widgets/product_attr
 import 'package:tecom/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:tecom/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:tecom/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:tecom/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 
 import '../../../../common/widgets/texts/section_heading.dart';
@@ -50,7 +52,7 @@ class ProductDetail extends StatelessWidget {
 
                   /// Description
                   const TSectionHeading(title: 'Description', showActionButton: false,),
-                  const SizedBox(height: TSizes.spaceBtwItems),
+                  const SizedBox(height: TSizes.spaceBtwItems / 2),
                   const ReadMoreText(
                     'This is a Product description for Blue Nike Sleeve less vest. There are more things that can be added but I am adding less content.',
                     trimLines: 2,
@@ -69,7 +71,10 @@ class ProductDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const TSectionHeading(title: 'Reviews(199)', showActionButton: false),
-                      IconButton(icon: const Icon(Iconsax.arrow_right_3, size: 18), onPressed: (){}),
+                      IconButton(
+                        icon: const Icon(Iconsax.arrow_right_3, size: 18),
+                        onPressed: () => Get.to( () => const ProductReviewsScreen()),
+                      ),
                     ],
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
