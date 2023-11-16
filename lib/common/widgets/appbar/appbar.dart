@@ -31,9 +31,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         automaticallyImplyLeading: false,
         leading: showBackArrow
-            ? IconButton(
-                onPressed: () => Get.back(),
-                icon: const Icon(Iconsax.arrow_left), color: dark ? Colors.white : TColors.dark,)
+            ? IconButton(onPressed: () => Get.back(), icon: Icon(Iconsax.arrow_left, color: dark ? Colors.white : TColors.dark,))
             : leadingIcon != null
                 ? IconButton(
                     onPressed: leadingOnProgress, icon: Icon(leadingIcon))
