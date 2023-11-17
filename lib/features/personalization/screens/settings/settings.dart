@@ -6,6 +6,7 @@ import 'package:tecom/common/widgets/custom_shapes/containers/primary_header_con
 import 'package:tecom/common/widgets/layouts/list_tiles/settings_menu_tile.dart';
 import 'package:tecom/common/widgets/texts/section_heading.dart';
 import 'package:tecom/features/personalization/screens/address/address.dart';
+import 'package:tecom/features/shop/screens/order/order.dart';
 import 'package:tecom/utils/constants/colors.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 import '../../../../common/widgets/layouts/list_tiles/user_profile_tile.dart';
@@ -59,7 +60,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In-progress and Completed Orders',
-                    onTap: (){},
+                    onTap: () => Get.to( () => const OrderScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,
