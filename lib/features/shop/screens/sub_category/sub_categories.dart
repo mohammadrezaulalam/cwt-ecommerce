@@ -12,7 +12,7 @@ class SubCategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: const TAppBar(
         title: Text('Sports'), showBackArrow: true,
       ),
       body: SingleChildScrollView(
