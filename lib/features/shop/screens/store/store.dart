@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tecom/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:tecom/common/widgets/layouts/grid_layout.dart';
 import 'package:tecom/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:tecom/features/shop/screens/brand/all_brands.dart';
 import 'package:tecom/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:tecom/utils/constants/colors.dart';
 import 'package:tecom/utils/constants/sizes.dart';
@@ -47,7 +49,7 @@ class StoreScreen extends StatelessWidget {
                       const SizedBox(height: TSizes.spaceBtwSections),
 
                       ///Featured Brands
-                      TSectionHeading(title: 'Featured Brands', onPressed: (){},),
+                      TSectionHeading(title: 'Featured Brands', onPressed: () => Get.to( () => const AllBrandsScreen()),),
                       const SizedBox(height: TSizes.spaceBtwItems),
 
                       TGridLayout(
