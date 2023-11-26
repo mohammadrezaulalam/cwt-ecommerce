@@ -10,10 +10,17 @@ import 'package:tecom/features/shop/screens/order/order.dart';
 import 'package:tecom/utils/constants/colors.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 import '../../../../common/widgets/layouts/list_tiles/user_profile_tile.dart';
+import '../../../shop/screens/cart/cart.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
 
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  bool _enable = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +61,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.shopping_cart,
                     title: 'My Cart',
                     subTitle: 'Add, remove products and move to checkout',
-                    onTap: (){},
+                    onTap: () => Get.to( () => const CartScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bag_tick,
@@ -92,6 +99,25 @@ class SettingsScreen extends StatelessWidget {
                   const TSectionHeading(title: 'App Settings', showActionButton: false,),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   TSettingsMenuTile(
+                    icon: Iconsax.cloud_lightning,
+                    title: 'Change Theme',
+                    subTitle: 'Change dark or light theme',
+                    trailing: Switch(
+                      value: _enable,
+                      onChanged: (val) {
+                        setState(() {
+                          _enable = val;
+                          if(val){
+                            Get.changeThemeMode(ThemeMode.dark);
+                          }else{
+                            Get.changeThemeMode(ThemeMode.light);
+                          }
+                        });
+                      },
+                    ),
+                  ),
+
+                  TSettingsMenuTile(
                     icon: Iconsax.document_upload,
                     title: 'Load Data',
                     subTitle: 'Upload Data to your Cloud Firebase',
@@ -113,7 +139,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.image,
                     title: 'HD Image Quality',
                     subTitle: 'Set image quality to be seen',
-                    trailing: Switch(value: false, onChanged: (value){}),
+                    trailing: Switch(value: false, onChanged: (value) {},),
                   ),
 
 

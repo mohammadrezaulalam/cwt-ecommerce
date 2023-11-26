@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "777413583604",
+    "project_id": "tecom-61cc2",
+    "storage_bucket": "tecom-61cc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777413583604:android:3d2c1dd7f8e11220cf74a1",
+        "android_client_info": {
+          "package_name": "com.rezaulalam.tecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777413583604-etqfoalt3pfpv6dsgbttvti3om5a6l67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rezaulalam.tecom",
+            "certificate_hash": "e31606a5429a7db10c7d5dce1c258929c2dc2c2f"
+          }
+        },
+        {
+          "client_id": "777413583604-omr0rokfp4fphgo28b228jvhvqp0118v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZt7Y4zN6X0_6e51XvQi3vGvrYo8ZoauM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777413583604-omr0rokfp4fphgo28b228jvhvqp0118v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "777413583604-9t31943uuvsmcuhhnabpt21thusm3t76.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rezaulalam.tecom"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
