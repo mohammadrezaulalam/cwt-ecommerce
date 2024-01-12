@@ -6,7 +6,6 @@ import 'package:tecom/common/widgets/custom_shapes/containers/primary_header_con
 import 'package:tecom/common/widgets/layouts/list_tiles/settings_menu_tile.dart';
 import 'package:tecom/common/widgets/texts/section_heading.dart';
 import 'package:tecom/data/repositories/authentication/authentication_repository.dart';
-import 'package:tecom/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:tecom/features/personalization/screens/address/address.dart';
 import 'package:tecom/features/shop/screens/order/order.dart';
 import 'package:tecom/utils/constants/colors.dart';
