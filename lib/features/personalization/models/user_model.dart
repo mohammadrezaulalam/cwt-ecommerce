@@ -1,5 +1,3 @@
-
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:tecom/utils/formatters/formatter.dart';
 
 /// Model class representing user data.
