@@ -21,10 +21,12 @@ class LoginForm extends StatelessWidget {
             ///Email
             TextFormField(
               decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.direct_right), labelText: TTexts.email,
+                prefixIcon: Icon(Iconsax.direct_right),
+                labelText: TTexts.email,
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields),
+
             ///Password
             TextFormField(
               decoration: const InputDecoration(
@@ -34,6 +36,7 @@ class LoginForm extends StatelessWidget {
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields / 2),
+
             ///Remember Me & Forget Password
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,14 +44,16 @@ class LoginForm extends StatelessWidget {
                 ///Remember Me
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value){}),
+                    Checkbox(value: true, onChanged: (value) {}),
                     const Text(TTexts.rememberMe),
                   ],
                 ),
 
                 ///Forget Password
                 TextButton(
-                  onPressed: () => Get.to( () => const ForgetPassword(),),
+                  onPressed: () => Get.to(
+                    () => const ForgetPassword(),
+                  ),
                   child: const Text(TTexts.forgetPassword),
                 ),
               ],
@@ -59,17 +64,20 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to( () => const NavigationMenu(),),
+                onPressed: () => Get.to(
+                  () => const NavigationMenu(),
+                ),
                 child: const Text(TTexts.signIn),
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwItems),
+
             ///Create Button
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
                 onPressed: () {
-                  Get.to( () => const SignUpScreen());
+                  Get.to(() => const SignUpScreen());
                 },
                 child: const Text(TTexts.createAccount),
               ),
