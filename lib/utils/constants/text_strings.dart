@@ -39,6 +39,7 @@ class TTexts{
   static const String verificationCode = "verificationCode";
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
+  static const String logOut = "Logout";
 
 
   // -- Authentication Headings

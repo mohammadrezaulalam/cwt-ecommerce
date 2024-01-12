@@ -82,7 +82,7 @@ class SignupForm extends StatelessWidget {
           ),
           const SizedBox(height: TSizes.spaceBtwInputFields,),
 
-          ///Email
+          ///Password
           Obx(
             () => TextFormField(
               controller: signupController.password,

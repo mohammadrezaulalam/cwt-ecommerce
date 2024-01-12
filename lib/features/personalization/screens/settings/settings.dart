@@ -5,11 +5,14 @@ import 'package:tecom/common/widgets/appbar/appbar.dart';
 import 'package:tecom/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tecom/common/widgets/layouts/list_tiles/settings_menu_tile.dart';
 import 'package:tecom/common/widgets/texts/section_heading.dart';
+import 'package:tecom/data/repositories/authentication/authentication_repository.dart';
+import 'package:tecom/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:tecom/features/personalization/screens/address/address.dart';
 import 'package:tecom/features/shop/screens/order/order.dart';
 import 'package:tecom/utils/constants/colors.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 import '../../../../common/widgets/layouts/list_tiles/user_profile_tile.dart';
+import '../../../../utils/constants/text_strings.dart';
 import '../../../shop/screens/cart/cart.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -142,6 +145,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     trailing: Switch(value: false, onChanged: (value) {},),
                   ),
 
+                  const SizedBox(height: TSizes.spaceBtwSections),
+                  ///Create Button
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () => AuthenticationRepository().logOut(),
+                      child: const Text(TTexts.logOut),
+                    ),
+                  ),
 
                 ],
               ),
