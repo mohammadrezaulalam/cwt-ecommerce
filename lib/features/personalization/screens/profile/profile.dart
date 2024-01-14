@@ -8,6 +8,7 @@ import 'package:tecom/features/personalization/controllers/user_controller.dart'
 import 'package:tecom/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:tecom/features/personalization/screens/profile/widgets/profile_menu.dart';
 import 'package:tecom/utils/constants/image_strings.dart';
+import 'package:tecom/utils/constants/shimmer.dart';
 import 'package:tecom/utils/constants/sizes.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -31,13 +32,19 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    const TCircularImage(
-                      image: TImages.user,
-                      width: 80,
-                      height: 80,
+                    Obx(
+                      () {
+                        final networkImage = controller.user.value.profilePicture;
+                        final image = networkImage.isNotEmpty ? networkImage : TImages.user;
+
+                        return controller.imageUploading.value
+                            ? const TShimmerEffect(width: 80, height: 80, radius: 80)
+                            : TCircularImage( image: image, width: 80, height: 80, isNetworkImage: networkImage.isNotEmpty,
+                      );
+                      },
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () => controller.uploadUserProfilePicture(),
                       child: const Text('Change Profile Picture'),
                     ),
                   ],
