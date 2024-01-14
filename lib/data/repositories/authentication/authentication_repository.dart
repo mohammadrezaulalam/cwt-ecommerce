@@ -18,8 +18,10 @@ class AuthenticationRepository extends GetxController{
   static AuthenticationRepository get instance => Get.find();
 
   ///Variables
+
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+  final localStorage = GetStorage();
 
   /// Call from main.dart on app launch
   @override
@@ -102,9 +104,28 @@ class AuthenticationRepository extends GetxController{
   }
 
   ///  [ReAuthenticate] - ReAuthenticate User
+
+  ///  [EmailAuthentication] - Register
+
+
   ///  [EmailAuthentication] - Forget Password
-  ///  [EmailAuthentication] - Register
-  ///  [EmailAuthentication] - Register
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
+
   ///  [EmailAuthentication] - Register
 
 
@@ -151,6 +172,8 @@ class AuthenticationRepository extends GetxController{
     try {
       await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
+      //localStorage.remove('REMEMBER_ME_EMAIL');
+      //localStorage.remove('REMEMBER_ME_PASSWORD');
       Get.off( () => const LoginScreen());
     } on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;

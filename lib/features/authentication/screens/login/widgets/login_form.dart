@@ -15,10 +15,10 @@ class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final loginController = Get.put(LoginController());
-    return Form(
-      key: loginController.loginFormKey,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+      child: Form(
+        key: loginController.loginFormKey,
         child: Column(
           children: [
             ///Email
